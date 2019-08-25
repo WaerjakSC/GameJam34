@@ -2,6 +2,8 @@
 
 
 #include "BasicEnemy.h"
+#include "GameFramework/Character.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 void ABasicEnemy::Tick(float DeltaTime)
 {

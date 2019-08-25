@@ -17,8 +17,7 @@ public:
 	void Tick(float DeltaTime);
 
 private:
-	UPROPERTY(VisibleAnywhere, Category=Aggro)
-	bool isLit{ false };
+
 
 
 	
