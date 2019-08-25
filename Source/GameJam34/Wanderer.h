@@ -27,7 +27,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AI)
 		TArray<ASimpleWaypoint*>Waypoints;
-	UPROPERTY(VisibleAnywhere, Category = AI)
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = AI)
 		bool isLit{ false };
 	UPROPERTY(EditAnywhere, Category = AI)
 		bool showDebugLines{ true };
