@@ -15,8 +15,7 @@ class GAMEJAM34_API ABasicEnemy : public AAIController
 	GENERATED_BODY()
 public:
 	void Tick(float DeltaTime);
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=AI)
-		TArray<TSubclassOf<ASimpleWaypoint>> Waypoints;
+
 private:
 	UPROPERTY(VisibleAnywhere, Category=Aggro)
 	bool isLit{ false };
