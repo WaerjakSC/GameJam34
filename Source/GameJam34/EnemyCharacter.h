@@ -4,32 +4,27 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "EnemyCharacter.h"
-#include "Wanderer.generated.h"
-
-class ASimpleWaypoint;
+#include "EnemyCharacter.generated.h"
 
 UCLASS()
-class GAMEJAM34_API AWanderer : public AEnemyCharacter
+class GAMEJAM34_API AEnemyCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this character's properties
-	AWanderer();
+	AEnemyCharacter();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 public:	
-	bool showPath{ true };
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AI)
-		TArray<ASimpleWaypoint*>Waypoints;
-
-	UPROPERTY(EditAnywhere, Category = AI)
-		bool showDebugLines{ true };
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = AI)
+		bool isLit{ false };
 	// Called to bind functionality to input
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
 };

@@ -18,6 +18,8 @@ public:
 	ABasicEnemy();
 	// Override this function 
 	ETeamAttitude::Type GetTeamAttitudeTowards(const AActor& Other) const override;
+
+
 private:
 
 

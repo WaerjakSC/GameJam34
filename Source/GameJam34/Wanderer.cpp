@@ -35,9 +35,7 @@ void AWanderer::BeginPlay()
 void AWanderer::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	if (isLit) {
-		GetCharacterMovement()->MaxWalkSpeed = 1000.f;
-	}
+
 }
 
 
