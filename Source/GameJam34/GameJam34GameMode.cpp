@@ -10,7 +10,9 @@ AGameJam34GameMode::AGameJam34GameMode()
 {
 	// set default pawn class to our Blueprinted character
 	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnClassFinder(TEXT("/Game/Blueprints/Player/FirstPersonCharacter"));
+	static ConstructorHelpers::FClassFinder<APlayerController> PlayerControllerClassFinder(TEXT("/Game/Blueprints/Player/BP_GameJam34PlayerController"));
 	DefaultPawnClass = PlayerPawnClassFinder.Class;
+	PlayerControllerClass = PlayerControllerClassFinder.Class;
 
 	// use our custom HUD class
 	HUDClass = AGameJam34HUD::StaticClass();
