@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Classes/GenericTeamAgentInterface.h"
 #include "GameJam34Character.generated.h"
 
 class UInputComponent;
@@ -44,7 +45,6 @@ class AGameJam34Character : public ACharacter
 	/** Motion controller (left hand) */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	class UMotionControllerComponent* L_MotionController;
-
 public:
 	AGameJam34Character();
 
